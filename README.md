@@ -39,7 +39,7 @@ struct mofang {
 ```
 
 2. Write a function to check if the Rubik's Cube is solved, which is quite complex.
-```
+```cpp
 bool is_back(mofang t) {
   if (t.qian[0][0] == t.qian[0][1] &&
       t.qian[0][1] == t.qian[0][2] &&
@@ -81,7 +81,7 @@ bool is_back(mofang t) {
 ```   
 3. Define 18 different operations, taking the first move (0 clockwise) as an example.
    
-```
+```cpp
 //操作1：0正向
 void act_1(mofang t) {
   mofang tmp;
@@ -175,7 +175,7 @@ void act_2(mofang t) {
 More in the main.cpp file
    
 4. If the cube is solved, end the process and output all the operations required to reach the current state.
-```
+``` cpp
   tmp.steps.push(1);
   if (is_back(tmp)) {
     flag = 1;
@@ -190,7 +190,7 @@ More in the main.cpp file
    ```
 5. Implement the breadth-first search algorithm.
 
-```
+```cpp
 void my_find_best() {
   q.push(init);
   bool tag = 0; //循环的条件
@@ -217,7 +217,7 @@ void my_find_best() {
 **4. Experiment Results**  
 The input is the color sequence of the faces of the cube in the order of back, top, front, bottom, left, and right. The output format is:
 
-```
+```cpp
 [Total steps needed]
 Steps:
 Specific steps]
